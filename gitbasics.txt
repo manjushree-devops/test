@@ -1,0 +1,122 @@
+
+GIT BASICS 
+What is Git? 
+Git  is  a distributed  version control  system (VCS)  that  is  widely  used  for tracking  changes  in 
+source code during software development. It was created by Linus Torvalds in 2005 and has since 
+become the de facto standard for version control in the software development industry. 
+Git  allows  multiple developers to collaborate  on a  project by providing  a  history  of  changes, 
+facilitating the tracking of who made what changes and when. Here are some key concepts and 
+features of Git: 
+1. Repository (Repo): A Git repository is a directory or storage location where your project's 
+files and version history are stored. There can be a local repository on your computer and 
+remote repositories on servers. 
+2. Commits: In Git, a commit is a snapshot of your project at a particular point in time. Each 
+commit includes a unique identifier, a message describing the changes, and a reference to the 
+previous commit. 
+3. Branches: Branches in Git allow you to work on different features or parts of your project 
+simultaneously  without  affecting  the  main  development  line  (usually  called  the  "master" 
+branch). Branches make it easy to experiment, develop new features, and merge changes back 
+into the main branch when they are ready. 
+4. Pull Requests (PRs): In Git-based collaboration workflows, such as GitHub or GitLab, pull 
+requests are a way for developers to propose changes and have them reviewed by their peers. 
+This is a common practice for open-source and team-based projects. 
+5. Merging: Merging involves combining changes from one branch (or multiple branches) into 
+another. When a branch's changes are ready to be incorporated into the main branch, you can 
+merge them. 
+6. Remote  Repositories: Remote repositories are copies  of  your project stored  on a different 
+server.  Developers  can  collaborate  by  pushing  their  changes  to  a  remote  repository  and 
+pulling changes from it. Common remote repository hosting services include GitHub, GitLab, 
+and Bitbucket. 
+7. Cloning:  Cloning  is  the  process  of  creating  a  copy  of  a  remote  repository  on  your  local 
+machine. This allows you to work on the project and make changes locally. 
+8. Forking: Forking is a way to create your copy of a repository, typically on a hosting platform 
+like GitHub. You can make changes to your fork without affecting the original project and 
+later create pull requests to contribute your changes back to the original repository. 
+ 
+ What is Version Control System (VCS)? 
+A Version Control System (VCS), also commonly referred to as a Source Code Management 
+(SCM) system, is a software tool  or system that helps manage  and track changes to files and 
+directories over time. The primary purpose of a VCS is to keep a historical record of all changes 
+made to a set of files, allowing multiple people to collaborate on a project while maintaining the 
+integrity of the codebase. 
+ There are two main types of VCS: centralized and distributed. 
+Centralized Version Control Systems (CVCS): In a CVCS, there is a single central repository 
+that stores all  the  project  files and their  version  history. Developers  check  out  files  from this 
+central repository, make changes, and then commit those changes back to the central repository. 
+Examples of CVCS include CVS (Concurrent Versions System) and Subversion (SVN). 
+
+
+
+Distributed Version Control Systems (DVCS): In a DVCS, every developer has a complete 
+copy of the project's repository, including  its full  history, on their local machine. This allows 
+developers to  work  independently,  create  branches  for experimentation,  and synchronize their 
+changes with remote repositories. Git is the most well-known and widely used DVCS, but other 
+DVCS options include Mercurial and Bazaar. 
+ Git Installation 
+To install Git on your computer, you can follow the steps for your specific operating system: 
+1. Installing Git on Windows: 
+a. Using Git for Windows (Git Bash): 
+• Go to the official Git for Windows website: https://gitforwindows.org/ 
+• Download the latest version of Git for Windows. 
+• Run the installer and follow the installation steps. You can choose the default settings 
+for most options. 
+ b. Using GitHub Desktop (Optional): 
+• If  you  prefer  a  graphical  user  interface (GUI) for  Git,  you  can  also  install  GitHub 
+Desktop, which includes Git. Download it from https://desktop.github.com/ and follow the 
+installation instructions. 
+To download 
+ https://git-scm.com/download/win 
+ 2. Installing Git from Source (Advanced): 
+• If you prefer to compile Git from source, you can download the source code from the 
+official Git website (https://git-scm.com/downloads) and follow the compilation instructions 
+provided there. This is usually only necessary for advanced users. 
+ After  installation,  you  can open a terminal or  command prompt  and  verify that  Git  is 
+correctly installed by running the following command: 
+$ git --version 
+If Git is installed successfully, you will see the Git version displayed in the terminal. You can 
+now start using Git for version control and collaborate on software development projects. 
+ 
+ Git Commands List 
+Git  is a popular version control system used for tracking changes in software development 
+projects. Here's a list of common Git commands along with brief explanations: 
+ 1. git init: Initializes a new Git repository in the current directory. 
+2. git  clone  <repository URL>:  Creates  a  copy  of  a  remote  repository  on  your  local 
+machine. 
+3. git add <file>: Stages a file to be committed, marking it for tracking in the next commit. 
+4. git commit -m "message": Records the changes you've staged with a descriptive commit 
+message. 
+
+
+
+5. git  status:  Shows the status of  your  working directory  and the  files  that  have  been 
+modified or staged. 
+6. git log: Displays a log of all previous commits, including commit hashes, authors, dates, 
+and commit messages. 
+7. git diff: Shows the differences between the working  directory and  the  last  committed 
+version. 
+8. git branch: Lists all branches in the repository and highlights the currently checked-out 
+branch. 
+9. git branch <branchname>: Creates a new branch with the specified name. 
+10. git checkout <branchname>: Switches to a different branch. 
+11. git merge <branchname>: Merges changes from the specified branch into the currently 
+checked-out branch. 
+12. git pull:  Fetches  changes  from a  remote repository and  merges them  into the current 
+branch. 
+13. git push: Pushes your local commits to a remote repository. 
+14. git remote: Lists the remote repositories that your local repository is connected to. 
+15. git fetch: Retrieves changes from a remote repository without merging them. 
+16. git reset <file>: Unstages a file that was previously staged for commit. 
+17. git reset --hard  <commit>:  Resets  the branch  to  a specific commit,  discarding  all 
+changes after that commit. 
+18. git stash: Temporarily  saves  your  changes  to  a "stash" so  you  can switch  branches 
+without committing or losing your work. 
+19. git tag: Lists and manages tags (usually used for marking specific points in history, like 
+releases). 
+20. git blame <file>: Shows who made each change to a file and when. 
+21. git rm <file>: Removes a file from both your working directory and the Git repository. 
+22. git mv <oldfile> <newfile>: Renames a file and stages the change. 
+ These are some of the most common Git commands, but Git offers a wide range of features 
+and options for more advanced usage. You can use git --help followed by the command name 
+to get more information about any specific command, e.g., git help commit.
+
+
